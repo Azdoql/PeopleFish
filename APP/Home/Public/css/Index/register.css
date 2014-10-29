@@ -1,0 +1,156 @@
+.register {
+	padding-top: 30px;
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.regbox {
+    float: left;
+    width: 600px;
+}
+.regbox h1 {
+	font-family: inherit;
+}
+form {
+	padding-left: 35px;
+}
+.inp span {
+	line-height: 45px;
+}
+.inp span, .inp input {
+	height: 45px;
+	outline:none;
+	border-radius: 6px 0px 0px 6px;
+}
+.inp {
+	position: relative;
+	margin-top: 25px;
+}
+.error {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+}
+.inp span {
+	border-radius: 5px 0px 0px 5px;
+	border: 1px solid #ddd;
+	width: 90px;
+	position: absolute;
+	text-align: right;
+	top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	background: #ddd;
+}
+.inp input {
+	width: 340px;
+	border: 1px solid #ddd;
+	padding-left: 95px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+}
+.submit {
+	border-radius: 0.2em;
+	margin-top: 45px;
+	height: 45px;	
+}
+.submit input{
+	border: 0px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 10px 25px;
+	outline: medium none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: normal;
+	border-radius: 5px;
+	color: #F7F7F7;
+	background: none repeat scroll 0% 0% #0095CD;
+}
+.submit input:hover {
+	background: none repeat scroll 0% 0% #0055FF;
+}
+.third-part {
+	width: 400px;
+	margin-top: 15px;
+	margin-left: 55px;
+}
+.third-part a {
+	margin-top: 10px;
+	margin-right: 15px;
+	float: right;
+	width: 32px;
+	height: 33px;
+	background: url(http://localhost/peopleFish/App/Home/Public/img/login-third-party.png) #CCC;
+}
+.third-part a:hover {
+	filter: gray;
+	filter: alpha(opacity=10);
+}
+.third-part .sina {
+	background-position: 0px 0px;
+}
+.third-part .linkin {
+	background-position: -37px 0px;
+}
+.third-part .baidu {
+	background-position: -74px 0px;
+}
+.third-part .qq {
+	background-position: -112px 0px;
+}
+.third-part .google {
+	background-position: -149px 0px;
+}
+.third-part .github {
+	background-position: -187px 0px;
+}
+.logBox {
+	float: right;
+	margin: auto 0px;
+	margin-top: 150px;
+	text-align: center;
+	border-left: 1px solid #ccc;
+	width: 390px;
+}
+.logBox h2 {
+	
+}
+.logBox .logcontent {
+	margin: 0 auto ;
+	margin-top: 40px;
+	width: 150;
+	text-align: center;
+}
+.logBox .logcontent a {
+	margin: auto;
+	text-align: center;
+	display: block;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	border: 1px solid #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FEFFEE;
+	background: none repeat scroll 0% 0% #F78D1D;
+	text-decoration: none;
+	font-family: "微软雅黑";
+	letter-spacing: 5px;
+	border-radius: 5px;
+}
+.logBox .logcontent a:hover {
+	content: #FEF4E9;
+	border: 1px solid #ccc;
+	background: none repeat scroll 0% 0% #F78D4D;
+}
+
+footer {
+	border: 1px solid red;
+	margin-top: 80px;
+	height: 120px;
+}

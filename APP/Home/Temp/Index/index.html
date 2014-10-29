@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title><?php echo $this->vars['title'] ?></title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+    <link href="http://localhost/peopleFish/App/Home/Public/css/Index/index.css"
+        rel="stylesheet"></link>
+    <script type="text/javascript" src="http://localhost/peopleFish/App/Home/Public/js/jquery.js" >
+    </script>
+<script type="text/javascript">
+window.onload = function() {
+    $('#topAd').show();
+    $('#topAd').animate({height:500}, 500, function() {
+        });
+     setInterval(function(){
+        $('#topAd').animate({height:80}, 500, function() {
+            $('#closeBtn').show();
+            $('#topAdMax').hide();
+        });
+     }, 3000);
+}
+$(document).ready(function(){
+    $('#closeBtn').click(function(){
+        $(this).hide();
+        $('#topAd').animate({height:0}, 500, function() {
+            $(this).hide();
+        });
+    });
+});
+
+</script> 
+</head>
+
+<body>
+<!-- Insert your content here -->
+<!--头部广告-->
+
+<div class="topAd" id="topAd">
+    <img src="http://localhost/peopleFish/App/Home/Public/img/bg-blue-s.jpg"
+        width="1000" height="400" id="topAdMax" class="topAdImg" />
+    <img src="http://localhost/peopleFish/App/Home/Public/img/bg-blue-s.jpg"
+        width="1000" height="200" id="topAdMin" class="topAdImg" />
+    <a href="javascript:void(0);" id="closeBtn">X</a>
+</div>
+
+
+<!--头部信息-->
+<script type="text/javascript">
+
+</script>
+<header>
+    <div class="wrap_nav">
+        <div class="log">
+            <a href="#">
+                <?php echo $this->vars['tit']['title'] ?>
+                <span><?php echo $this->vars['tit']['url'] ?></span>
+            </a>
+        </div>
+        <ul>
+            <?php foreach ( $this->vars['nav'] as $key => $val ) { ?>
+                <li><a href="<?php echo $val['url'] ?>"><?php echo $val['name'] ?></a></li>
+            <?php } ?>
+        </ul>
+        <div class="entry">
+            <a href="#">登录</a>
+            <span>|</span>            
+            <a href="http://localhost/peopleFish/App/Home/View/Index/register.html">注册</a>
+        </div>
+    </div>
+</header>
+
+<!--中间部分-->
+<div class="Content">
+    <div class="imgbox">
+        
+    </div>
+</div>
+</body>
+</html>
