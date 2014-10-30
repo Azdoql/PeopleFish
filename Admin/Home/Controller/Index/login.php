@@ -1,3 +1,4 @@
 <?php
-$this->display();
+	echo 'fdfd';
+	$this->display();
 ?>

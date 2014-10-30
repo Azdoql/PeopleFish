@@ -5,7 +5,7 @@ namespace Pfish;
  * 控制器类库文件
  */
 class Controller {
-
+    public $vars = array();
     /**
      * 视图实例对象
      * @var view
@@ -46,36 +46,26 @@ class Controller {
      * @return mixed
      */
     public function display ($templateFile='') {
-        $this->view->display($templateFile);
-    }
-
-    // 替换模版中的值
-    public function assign($key, $value) {
-        $this->vars[$key] = $value;
+        include $this->view->display($templateFile);
     }
 
     private function getIncludeFile( $_inc_file ) {
-        $_tpl_dir = $this->_tpl_dir;
-        $_cache_dir = $this->_cache_dir;
-        if ( strpos($_inc_file, '../') !== FALSE ) {
-            $_tarr = explode('/', $_inc_file);
-            foreach ( $_tarr as $_val ) {
-                if ( $_val != '..' ) break;
-                $_tpl_dir = dirname($_tpl_dir);
-                $_cache_dir = dirname($_cache_dir);
-                $_inc_file = str_replace('../', '', $_inc_file);
-            }
-        }
+       //return include'http://localhost/PeopleFish/APP/Home/View/Common/'.$_inc_file.'.html';
+    }
 
-        $_tpl_file = $_tpl_dir.'/'.$_inc_file;
-        $_cache_file = $_cache_dir.'/'.$_inc_file.'.php';
-        //echo $_tpl_file,'<br />';
-        //echo $_cache_file,'<br />';
-        if ( ! $this->isCached( $_cache_file ) ) {
-            $this->compile( $_tpl_file, $_cache_file );
+    /**
+     * 模板变量赋值
+     * @access protected
+     * @param mixed $name 要显示的模板变量
+     * @param mixed $value 变量的值
+     * @return 
+     */
+    public function assign($name, $value='') {
+        if (is_array($name)) {
+            $this->vars = array_merge($this->vars,$name);
+        } else {
+            $this->vars[$name] = $value;
         }
-        
-        return $_cache_file;
     }
 }
 ?>

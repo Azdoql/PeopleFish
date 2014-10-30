@@ -8,7 +8,6 @@ namespace Pfish;
 class Build {
     
     static public function checkDir($module) {
-
         // 检测应用目录是否需要自动创建
         if (!is_dir(APP_PATH.$module)) {
             // 创建模块的目录结构

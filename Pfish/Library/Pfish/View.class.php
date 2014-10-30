@@ -4,7 +4,7 @@ namespace Pfish;
 class View {
 
 	public $_conter_dir = null;
-
+    
     public function __construct()
     {
     	
@@ -19,6 +19,8 @@ class View {
     function display ($templateFile='') {
         // 解析并获取模板内容
         $content = $this->fetch($templateFile);
+
+        return $content;
     }
 
     public function fetch($templateFile = '') {
@@ -39,11 +41,23 @@ class View {
         
         // 获取并清空缓存
         //$content = ob_get_clean();
-        //return $content;
+        return $cacheFile;
     }
 
-    
-    
+    /**
+     * 模板变量赋值
+     * @access public
+     * @param mixed $name
+     * @param mixed $value
+     */
+    public function assign($name,$value=''){
+        if(is_array($name)) {
+            $this->tVar   =  array_merge($this->tVar,$name);
+        }else {
+            $this->tVar[$name] = $value;
+        }
+        echo $this->tVar[$name];
+    }
 }
 
 ?>

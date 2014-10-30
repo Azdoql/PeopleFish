@@ -85,7 +85,8 @@ form {
 	float: right;
 	width: 32px;
 	height: 33px;
-	background: url(http://localhost/peopleFish/App/Home/Public/img/login-third-party.png) #CCC;
+	border-radius: 5px;
+	background: url(http://localhost/PeopleFish/APP/Home/Public/img/login-third-party.png) #CCC;
 }
 .third-part a:hover {
 	filter: gray;
@@ -107,7 +108,7 @@ form {
 	background-position: -149px 0px;
 }
 .third-part .github {
-	background-position: -187px 0px;
+	background-position: -185px 0px;
 }
 .logBox {
 	float: right;

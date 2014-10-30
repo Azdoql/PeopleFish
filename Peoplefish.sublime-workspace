@@ -51,46 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Test/Home/Controller/Index/index.php",
-			"settings":
-			{
-				"buffer_size": 49,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Pfish/Library/Pfish/View.class.php",
-			"settings":
-			{
-				"buffer_size": 1033,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Pfish/Library/Pfish/Template.class.php",
-			"settings":
-			{
-				"buffer_size": 3003,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Test/Home/View/Index/index.html",
-			"settings":
-			{
-				"buffer_size": 283,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Test/Home/Temp/Index/index.html",
-			"settings":
-			{
-				"buffer_size": 392,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -132,9 +92,14 @@
 	},
 	"file_history":
 	[
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Model.class.php",
+		"/var/www/PeopleFish/index.php",
 		"/var/www/PeopleFish/Test/Home/Temp/Index/index.html",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/View.class.php",
 		"/var/www/PeopleFish/Test/Home/View/Index/index.html",
 		"/var/www/PeopleFish/Test/Home/Controller/Index/index.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Template.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Build.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smart.class.php",
 		"/var/www/PeopleFish/Test/Common/Common/index.html",
@@ -144,8 +109,6 @@
 		"/home/ru/.config/sublime-text-2/Packages/User/2pdf.sublime-settings",
 		"/home/ru/.config/sublime-text-2/Packages/User/Package Control.sublime-settings",
 		"/var/www/PeopleFish/Test/Home/Temp/Index/index.php.html",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/View.class.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Template.class.php",
 		"/var/www/PeopleFish/Test/Common/Conf/config.php",
 		"/var/www/PeopleFish/README.md",
 		"/home/ru/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
@@ -154,7 +117,6 @@
 		"/home/ru/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/var/www/PeopleFish/Peoplefish.sublime-workspace",
 		"/home/ru/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Dispatcher.class.php",
 		"/var/www/PeopleFish/Pfish/Pfish.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smarty.class.php",
@@ -164,7 +126,6 @@
 		"/var/www/PeopleFish/Pfish/Library/Pfish/App.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Template1.class.php",
 		"/var/www/PeopleFish/Pfish/Conf/config.php",
-		"/var/www/PeopleFish/index.php",
 		"/var/www/PeopFish/PeopFish/Libary/Peop/Peop.class.php",
 		"/var/www/PeopFish/PeopFish/Libary/Peop/App.class.php",
 		"/var/www/Web/Javascript/checkboxgroup/index.html",
@@ -221,148 +182,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Test/Home/Controller/Index/index.php",
-					"settings":
-					{
-						"buffer_size": 49,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Pfish/Library/Pfish/View.class.php",
-					"settings":
-					{
-						"buffer_size": 1033,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								442,
-								442
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Pfish/Library/Pfish/Template.class.php",
-					"settings":
-					{
-						"buffer_size": 3003,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1277,
-								1277
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 15.0,
-						"translation.y": 414.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Test/Home/View/Index/index.html",
-					"settings":
-					{
-						"buffer_size": 283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								232,
-								232
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Test/Home/Temp/Index/index.html",
-					"settings":
-					{
-						"buffer_size": 392,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								373,
-								373
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
