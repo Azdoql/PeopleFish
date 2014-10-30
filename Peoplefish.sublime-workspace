@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_c",
+				"_inc_file"
+			],
+			[
 				"def",
 				"define"
 			],
@@ -92,15 +96,32 @@
 	},
 	"file_history":
 	[
+		"/var/www/PeopleFish/Admin/Home/Controller/Index/login.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Build.class.php",
+		"/var/www/PeopleFish/admin.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Pfish.class.php",
+		"/var/www/PeopleFish/Admin/Home/index.html",
+		"/var/www/PeopleFish/Admin/Home/View/Index/login.html",
+		"/var/www/PeopleFish/Admin/Home/View/index.html",
+		"/var/www/PeopleFish/Admin/Home/View/Index/index.php",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/register.php",
+		"/var/www/PeopleFish/APP/Home/View/Index/register.html",
+		"/var/www/PeopleFish/APP/Home/Controller/User/register.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Template.class.php",
+		"/var/www/PeopleFish/APP/Home/View/Index/index.html",
+		"/var/www/PeopleFish/APP/Home/Temp/Index/index.html",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/index.php",
+		"/var/www/PeopleFish/APP/Home/View/Common/header.html",
+		"/var/www/PeopleFish/APP/Home/Public/css/Index/register.css",
+		"/var/www/PeopleFish/APP/Home/View/Index/login.html",
+		"/var/www/PeopleFish/APP/Home/Public/css/Index/index.css",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Model.class.php",
 		"/var/www/PeopleFish/index.php",
 		"/var/www/PeopleFish/Test/Home/Temp/Index/index.html",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/View.class.php",
 		"/var/www/PeopleFish/Test/Home/View/Index/index.html",
 		"/var/www/PeopleFish/Test/Home/Controller/Index/index.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Template.class.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Build.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smart.class.php",
 		"/var/www/PeopleFish/Test/Common/Common/index.html",
 		"/var/www/PeopleFish/Test/Home/View/index.html",
@@ -120,7 +141,6 @@
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Dispatcher.class.php",
 		"/var/www/PeopleFish/Pfish/Pfish.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smarty.class.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Pfish.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Vendor/Smarty/change_log.txt",
 		"/var/www/PeopleFish/Pfish/Library/Vendor/Smarty/README",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/App.class.php",

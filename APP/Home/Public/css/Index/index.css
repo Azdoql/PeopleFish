@@ -122,9 +122,56 @@ header {
     color: #fff;
 }
 
-/*************中间部分样式*************/
+/*Content Start*/
 .Content {
-    background: url(http://localhost/peopleFish/App/Home/Public/img/bg-blue-s.jpg);
-    border: 1px solid red;
-    height: 600px;
+    background: #ccc;
 }
+.imgbox {
+    background: url(http://localhost/PeopleFish/APP/Home/Public/img/bg.jpg) no-repeat;
+    border: 1px solid red;
+}
+.imgbox_n {
+    margin: auto;
+    width: 1000px;
+    height: 317px;
+}
+
+.survey {
+    margin: auto;
+    width: 1000px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+.su_box {
+    float: left;
+    margin: 25px 25px;
+    width: 450px;
+}
+.su_dc {
+    border: 1px solid red;
+    padding: 15px 5px;
+}
+.su_left {
+    border-bottom-right-radius: 25px;
+}
+.su_right {
+    border-bottom-left-radius: 25px;
+}
+.su_head {
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px dashed #666;
+}
+.su_head a {
+    text-decoration: none;
+}
+.su_content {
+    overflow: hidden;;
+    padding: 15px 5px; 
+}
+.su_img, .su_text {
+    float: left;
+    border: 1px solid red;
+}
+
+/*ccontent End*/
