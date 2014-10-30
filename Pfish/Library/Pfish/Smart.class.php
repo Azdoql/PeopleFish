@@ -9,6 +9,6 @@ class Smart {
 
 	function smart() {
 		
-	}
+	} 
 }
 ?>

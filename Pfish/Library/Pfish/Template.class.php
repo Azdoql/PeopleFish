@@ -14,39 +14,30 @@ class Template {
 
 	// 定义模版解析数组
 	static public $_rules = array(
-        //'/<{\s*}>/is'   =>  '<?php 
-       // <{djr}>  =>  <?php echo $this->vars['djr'] ?\>
-       '/\<\{([a-z0-9_]+)\}\>/is'    => '<?php echo $this->vars[\'$1\'] ?>',
-       // <\{([a-z0-9_]+)\.([a-z0-9_]+)\}>             echo $this->vars['djr']['djr']
-       '/\<\{([a-z0-9_]+)\.([a-z0-9_]+)\}\>/is'    =>  '<?php echo $this->vars[\'$1\'][\'$2\'] ?>',
-       // <{\{([a-z0-9_]+)\.([a-z0-9_]+)\.([a-z0-9_]+)\}>  
-       '/\<\{([a-z0-9_]+)\.([a-z0-9_]+)\.([a-z0-9_]+)\}\>/is' => '<?php echo $this->vars[\'$1\'][\'$2\'][\'$3\'] ?>',
-	   // for (value : var){ }	
-       '/\<\{\s*for\s*\(\s*([a-z0-9_]+)\s*\:\s*([a-z0-9_]+)\s*\)\s*\}\>/is'
-                        => '<?php foreach ( \$this->vars[\'$2\'] as \$key => \$$1 ) { ?>',
-        '/\<\{\$([a-z0-9_]+)\.([a-z0-9_]+)\}\>/is'  =>  '<?php echo \$$1[\'$2\'] ?>',
-        '/\<\{\s*}\s*\}\>/ '    =>  '<?php } ?>',
-
-        //include|require file
-        '/(include|require)\s+([a-z0-9\.\/-]+)/i'  => '$1 \$this->getIncludeFile(\'$2\')',
+        /*{$name}*/
+        '/\{\$([a-z0-9_]+)\}/is'    => '<?php echo \$$1; ?>',
+        /*{$name.naem}*/
+        '/\{\$([a-z0-9_]+).([a-z0-9_]+)\}/is'    => 
+            '<?php echo \$$1[\'$2\']; ?>',
+        /*{$name.name.name}*/
+        '/\{\$([a-z0-9_]+).([a-z0-9_]+).([a-z0-9_]+)\}/is'    => 
+            '<?php echo \$$1[\'$2\'][\'$3\']; ?>',
+        /*${name}*/
+        '/\$\{([a-z0-9_]+)\}/is'    => '<?php echo $this->vars[\'$1\']; ?>',
+        /*${name.naem}*/
+        '/\$\{([a-z0-9_]+).([a-z0-9_]+)\}/is'    => 
+            '<?php echo $this->vars[\'$1\'][\'$2\']; ?>',
+        /*${name.name.name}*/
+        '/\$\{([a-z0-9_]+).([a-z0-9_]+).([a-z0-9_]+)\}/is'    => 
+            '<?php echo $this->vars[\'$1\'][\'$2\'][\'$3\']; ?>',
+        /*include | require file*/
+        '/\{(include|require)\s+([a-z0-9_\/\-]+)\}/is'    
+            =>  '<?php $1 \$this->getIncludeFile(\'$2\') ?>',
+        /*for ( val : {array} )*/
+        '/for\s*\(\s*\$([a-z0-9_]+)\s*:\s*\$\{([a-z0-9_]+)\}\s*\)/i'
+            => 'foreach ( \$this->vars[\'$2\'] as \$$1 )',
     );
 
-	/**
-     * 解析模版函数
-     * @param $_temp_file 模版文件名
-     */
-    static function fetch($_conter_dir) {
-    	$_tmpl_file = PRO_PATH.APP_PATH.HOME_PATH.'View'.DIR_SEP.$_conter_dir.'.html';
-    	$_temp_fle = PRO_PATH.APP_PATH.HOME_PATH.'Temp'.DIR_SEP.$_conter_dir.'.html';
-
-    	if (is_file($_tmpl_file)) {
-            self::compiler($_tmpl_file, $_temp_fle);  
-        } else {
-            die('Error:模版文件不存在【'.$_conter_dir.'】');
-        }
-
-        //require $_temp_fle;
-	}
 
 	/**
 	 * 解析模版函数
@@ -60,7 +51,7 @@ class Template {
         if ( $_TPL === FALSE ) {
             die('Error:获取模版内容失败【'.$_tmpl_file.'】');
         }    
-
+       
         //解析后的模版内容
         $_TPL = preg_replace( array_keys(self::$_rules), self::$_rules, $_TPL);
         

@@ -1,4 +1,4 @@
 <?php
-	echo 'sssHello World!';
-	$this->display('index.html');
+	echo 'Hello World!';
+	$this->display();
 ?>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<?php echo $this->vars['name']; ?>
+	<?php echo $this->vars['name']['value']; ?>
+	<?php echo $this->vars['naeme']['name']['value']; ?>
+	<?php echo $name; ?>
+	<?php echo $name['value']; ?>
+	<?php echo $name['name']['value']; ?>
+	<?php include $this->getIncludeFile('file') ?>
+	{for ( val : $array )  }
+    <div></div><div></div>
+	{$)}
+</body>
+</html>

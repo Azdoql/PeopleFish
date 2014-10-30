@@ -39,9 +39,12 @@ class Build {
         // 没有创建的话自动创建
 
         if (!is_dir(APP_PATH)) {
-            mkdir(APP_PATH, 0755, true);
+            if (!mkdir(APP_PATH, 0777, true)) {
+                die("Error:".dirname(__FILE__));
+            }
         }
-        if (is_writeable(APP_PATH)) {
+       
+        if (is_writeable(APP_PATH)) {echo 'sdsd';
             $dirs = array(
                 COMMON_PATH,
                 COMMON_PATH.'Common/',
@@ -56,7 +59,7 @@ class Build {
             // 生成项目目录文件
             foreach ($dirs as $dir) {
                 if (!is_dir($dir)) {
-                    mkdir($dir, 0755, true);
+                    mkdir($dir, 0777, true);
                 }
             }
             // 写入目录安全文件
@@ -85,6 +88,8 @@ class Build {
             // 写入视图文件
             #code......
             
+        } else {
+            die("Error: No TRUE");
         }
         
     }

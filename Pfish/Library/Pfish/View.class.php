@@ -29,12 +29,17 @@ class View {
         $templateFile = $templateFile == '' ? 
             APP_PATH.'Home/View/'.CONTROLLER_NAME.'.html' :
             APP_PATH.'Home/View/'.dirname(CONTROLLER_NAME).'/'.$templateFile;
-        $cacheFile = APP_PATH.'Home/Temp/'.CONTROLLER_NAME.'.php.html';
-        Template::compiler($templateFile, $cacheFile);
+        $cacheFile = APP_PATH.'Home/Temp/'.CONTROLLER_NAME.'.html';
+        if (is_file($templateFile)) {
+            Template::compiler($templateFile, $cacheFile);
+        } else {
+            die('Error:模版文件不存在【'.CONTROLLER_NAME.'】');
+        }      
+
+        
         // 获取并清空缓存
         //$content = ob_get_clean();
-
-        return $content;
+        //return $content;
     }
 
     
