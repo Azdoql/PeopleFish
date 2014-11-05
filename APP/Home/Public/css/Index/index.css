@@ -101,7 +101,10 @@ header {
     border-left: 2px solid #ccc;
     background: #eee;
 }
+
 .wrap_nav li a{
+    float: left;
+    width: 100px;
     text-decoration: none;
     color: #ccc;
 }
@@ -128,7 +131,6 @@ header {
 }
 .imgbox {
     background: url(http://localhost/PeopleFish/APP/Home/Public/img/bg.jpg) no-repeat;
-    border: 1px solid red;
 }
 .imgbox_n {
     margin: auto;
@@ -150,6 +152,7 @@ header {
 .su_dc {
     border: 1px solid red;
     padding: 15px 5px;
+    background: #CCCC00;
 }
 .su_left {
     border-bottom-right-radius: 25px;
@@ -173,5 +176,12 @@ header {
     float: left;
     border: 1px solid red;
 }
-
 /*ccontent End*/
+
+/*footer Start*/
+footer {
+    border-top: 2px dashed #CCC;
+    height: 200px;
+    background: #2E4E3C;
+}
+/**footer End*/

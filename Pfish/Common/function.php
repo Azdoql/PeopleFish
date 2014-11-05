@@ -52,31 +52,6 @@ function getStr($string, $startstr = null, $endstr = null) {
 	return $string;
 }
 
-/**
-* @param $array 数组
-* @param $sysbol 连接符号
-* @param $suffix 后缀
-*/
-function converPaths ($array, $symbol, $suffix) {
-	var_dump($array);
-	echo 'aa';
-    if (!empty($array[0] && !empty($array[1])) &&!empty(end($array))) {
-        for ($i = 0; $i < count($array) - 1; $i++) {
-            $ContrPath = isset($ContrPath) ? 
-            $ContrPath.$array[$i].DIR_SEP : $array[$i].DIR_SEP;
-        }            
-        $ControlFile = $ContrPath . end($array);
-    } else {
-        $ControlFile = 'Index'.DIR_SEP.'index';
-    }
-
-    return $ControlFile.$suffix;
-}
-
-
-function error () {
-
-}
 
 /**
  * 递归创建文件
@@ -160,5 +135,30 @@ function load_config($file, $parse = CONF_PARSE) {
 			}
 			break;
 	}
+}
+
+/**
+ * 实例化模型类 格式 [资源://][模块/]模型
+ * @param string $name 资源地址
+ * @param string $layer 模型层名称
+ * @return Model
+ */
+function D($name='',$layer='') {
+
+    if(empty($name)) return new Pfish\Model;
+    
+    return $model;
+}
+
+/**
+ * 实例化一个没有模型文件的Model
+ * @param string $name Model名称 支持指定基础模型 例如 MongoModel:User
+ * @param string $tablePrefix 表前缀
+ * @param mixed $connection 数据库连接信息
+ * @return Model
+ */
+function M($name='', $tablePrefix='',$connection='') {
+   $class = 'Pfish\\Model';
+   return new $class($name='', $tablePrefix='',$connection='');
 }
 ?>

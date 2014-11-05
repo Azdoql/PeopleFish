@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"border-ra",
+				"border-bottom-right-radius"
+			],
+			[
+				"so",
+				"scroll"
+			],
+			[
+				"flo",
+				"overflow"
+			],
+			[
+				"im",
+				"imgbox"
+			],
+			[
 				"_c",
 				"_inc_file"
 			],
@@ -59,7 +75,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -96,10 +112,33 @@
 	},
 	"file_history":
 	[
-		"/var/www/PeopleFish/Admin/Home/Controller/Index/login.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Build.class.php",
-		"/var/www/PeopleFish/admin.php",
+		"/var/www/PeopleFish/APP/Home/View/Index/index.html",
+		"/var/www/PeopleFish/APP/Home/View/Index/help.html",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/question.html",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/form.html",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/help.php",
+		"/var/www/PeopleFish/APP/Home/Public/css/Index/index.css",
+		"/var/www/PeopleFish/index.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Pfish.class.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/App.class.php",
+		"/var/www/PeopleFish/Test/Home/Conf/config.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Model.class.php",
+		"/var/www/PeopleFish/Pfish/Mode/common.php",
+		"/var/www/PeopleFish/Test/Home/Controller/Index/index.php",
+		"/var/www/PeopleFish/Pfish/Common/function.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Db.class.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Dispatcher.class.php",
+		"/var/www/PeopleFish/Pfish/Library/Pfish/Build.class.php",
+		"/var/www/PeopleFish/Pfish/Pfish.php",
+		"/var/www/PeopleFish/APP/Conf/config.php",
+		"/var/www/PeopleFish/Pfish/Conf/config.php",
+		"/var/www/PeopleFish/APP/Home/View/Index/usecase.html",
+		"/var/www/PeopleFish/APP/Home/View/Common/header.html",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/usecase.php",
+		"/var/www/PeopleFish/APP/Home/Controller/Index/index.php",
+		"/var/www/PeopleFish/Admin/Home/Controller/Index/login.php",
+		"/var/www/PeopleFish/admin.php",
 		"/var/www/PeopleFish/Admin/Home/index.html",
 		"/var/www/PeopleFish/Admin/Home/View/Index/login.html",
 		"/var/www/PeopleFish/Admin/Home/View/index.html",
@@ -107,21 +146,13 @@
 		"/var/www/PeopleFish/APP/Home/Controller/Index/register.php",
 		"/var/www/PeopleFish/APP/Home/View/Index/register.html",
 		"/var/www/PeopleFish/APP/Home/Controller/User/register.php",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Controller.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Template.class.php",
-		"/var/www/PeopleFish/APP/Home/View/Index/index.html",
 		"/var/www/PeopleFish/APP/Home/Temp/Index/index.html",
-		"/var/www/PeopleFish/APP/Home/Controller/Index/index.php",
-		"/var/www/PeopleFish/APP/Home/View/Common/header.html",
 		"/var/www/PeopleFish/APP/Home/Public/css/Index/register.css",
 		"/var/www/PeopleFish/APP/Home/View/Index/login.html",
-		"/var/www/PeopleFish/APP/Home/Public/css/Index/index.css",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Model.class.php",
-		"/var/www/PeopleFish/index.php",
 		"/var/www/PeopleFish/Test/Home/Temp/Index/index.html",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/View.class.php",
 		"/var/www/PeopleFish/Test/Home/View/Index/index.html",
-		"/var/www/PeopleFish/Test/Home/Controller/Index/index.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smart.class.php",
 		"/var/www/PeopleFish/Test/Common/Common/index.html",
 		"/var/www/PeopleFish/Test/Home/View/index.html",
@@ -138,14 +169,10 @@
 		"/home/ru/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/var/www/PeopleFish/Peoplefish.sublime-workspace",
 		"/home/ru/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/Dispatcher.class.php",
-		"/var/www/PeopleFish/Pfish/Pfish.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Smarty.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Vendor/Smarty/change_log.txt",
 		"/var/www/PeopleFish/Pfish/Library/Vendor/Smarty/README",
-		"/var/www/PeopleFish/Pfish/Library/Pfish/App.class.php",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Template1.class.php",
-		"/var/www/PeopleFish/Pfish/Conf/config.php",
 		"/var/www/PeopFish/PeopFish/Libary/Peop/Peop.class.php",
 		"/var/www/PeopFish/PeopFish/Libary/Peop/App.class.php",
 		"/var/www/Web/Javascript/checkboxgroup/index.html",
@@ -165,7 +192,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -180,6 +207,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"		\n",
+			"var_dump",
 			"!",
 			"ddddd",
 			"!",

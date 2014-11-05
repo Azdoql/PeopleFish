@@ -12,23 +12,13 @@ class Controller {
      * @access protected
      */    
     protected $view  = null;
-    /**
-     * wenjianjiegoulujing
-     * @var view
-     * @access protected
-     */    
-    protected $filePath  = null;
-
 
     public function __construct() {
-        //include APP_PATH.'Home/Controller/'.CONTROLLER_NAME.'.php';
+        
         //实例化视图类
         $this->view = Pfish::instance('Pfish\View');
     }
     
-    /**
-     * 
-     */
     public function show ($filename, $urlCase) {
         if (is_file(APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php')) {
             include APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php';
@@ -50,7 +40,7 @@ class Controller {
     }
 
     private function getIncludeFile( $_inc_file ) {
-       //return include'http://localhost/PeopleFish/APP/Home/View/Common/'.$_inc_file.'.html';
+       
     }
 
     /**
@@ -67,5 +57,6 @@ class Controller {
             $this->vars[$name] = $value;
         }
     }
+
 }
 ?>

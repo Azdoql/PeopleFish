@@ -1,6 +1,7 @@
 <?php
 	echo 'Hello World!';
-    $name = 'dfdf';
-	$this->assign('name', 'nasssme');
+    $this->assign('name', 'name');
+	$user = M();
+	$user->test();
 	$this->display();
 ?>

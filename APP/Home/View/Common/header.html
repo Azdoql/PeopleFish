@@ -1,5 +1,15 @@
 <link href="http://localhost/PeopleFish/APP/Home/Public/css/Index/index.css"
         rel="stylesheet"></link>
+<script type="text/javascript" 
+        src="http://localhost/PeopleFish/APP/Home/Public/js/jquery.js" >
+</script>
+<script> 
+$(document).ready(function() {
+    $('ul').click(function() {
+        $(this).css('background', 'red');
+    });
+});   
+</script>
 <header>
     <div class="wrap_nav">
         <div class="log">
@@ -9,11 +19,21 @@
             </a>
         </div>
         <ul>
-            <li><a href="#">问卷</a></li>
-            <li><a href="#">表单</a></li>
-            <li><a href="#">模版库</a></li>
-            <li><a href="#">论坛</a></li>
-            <li><a href="#">帮助</a></li>
+            <li>
+                <a href="http://localhost/PeopleFish/index.php/Index/naire.html">问卷</a>
+            </li>
+            <li>
+                <a href="http://localhost/PeopleFish/index.php/Index/form.html">表单</a>
+            </li>
+            <li>
+                <a href="http://localhost/PeopleFish/index.php/Index/templet.html">模版库</a>
+            </li>
+            <li>
+                <a href="http://localhost/PeopleFish/index.php/Index/forum.html">论坛</a>
+            </li>
+            <li>
+                <a href="http://localhost/PeopleFish/index.php/Index/help.html">帮助</a>
+            </li>
         </ul>
         <div class="entry">
             <a href="#">登录</a>

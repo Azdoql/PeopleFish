@@ -15,7 +15,7 @@ class App {
         if (FALSE !== APP_DEBUG) {
            App::init();
         } else {
-            echo '加载缓存文件<br />';
+            
         }
         
         return ;
@@ -28,10 +28,6 @@ class App {
     static public function init () {
         // URL 调度
         Dispatcher::dispatch();
-        // 调运控制器方法
-        //$_controller = new Controller;
-        //$_controller->show();
-
         return ;
     }
 }

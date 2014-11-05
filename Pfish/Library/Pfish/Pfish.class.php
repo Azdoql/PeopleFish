@@ -5,7 +5,6 @@
  * 1.引入所需的类库文件
  * 2.自动检测建立项目文件
  * 3.调运加载系统运行文件
- *
  */
 namespace Pfish;
 
@@ -23,18 +22,19 @@ class Pfish {
         // 读取模式配置文件
         $mode  =  include is_file(CONF_PATH.'core.php') ? 
             CONF_PATH.'core.php' : MODE_PATH.'common.php';
+            
         // 加载函数文件
         foreach ($mode['core'] as $file) {
             if(is_file($file)) {
                 include $file;
             }
         }
-
+        
         // 加载配置文件
         foreach ($mode['config'] as $key=>$file){
            is_numeric($key) ? C(load_config($file)) : C($key, load_config($file));
         }
-        
+       
         $module = 'Home';
         // 自动创建系统项目文件
         if (!is_dir(APP_PATH.$module)) {
@@ -59,7 +59,6 @@ class Pfish {
         }
         
         $filename = PRO_PATH.'Pfish/Library/'.$className.'.class.php';
-        
         if (file_exists($filename) && !class_exists($className)) {
             include_once $filename;
         } else {
@@ -79,8 +78,9 @@ class Pfish {
         
         if (class_exists($class)) {
             $o = new $class();
+            return $o;
         } 
-        return $o;        
+                
     }
 }
 
