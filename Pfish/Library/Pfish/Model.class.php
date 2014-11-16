@@ -5,6 +5,7 @@ class Model {
 	
 	private $db_config = array();
 	private $Db = null;
+	protected $_validate = array(); 
 
 	 /**
      * 取得DB类的实例对象 字段检查
@@ -40,8 +41,34 @@ class Model {
 		$this->Db->select();
 	}
 
-	public function I($table, $array) {
-		$this->Db->I($table, $array);
+	public function insert($table, $array) {
+		$this->Db->insert($table, $array);
+	}
+
+	/**
+     * 使用正则验证数据
+     * @access public
+     * @param string $value  要验证的数据
+     * @param string $rule 验证规则
+     * @return boolean
+     */
+	public function regex ($value, $rule) {
+		 $validate = array(
+            'require'   =>  '/\S+/',
+            'email'     =>  '/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/',
+            'url'       =>  '/^http(s?):\/\/(?:[A-za-z0-9-]+\.)+[A-za-z]{2,4}(?:[\/\?#][\/=\?%\-&~`@[\]\':+!\.#\w]*)?$/',
+            'currency'  =>  '/^\d+(\.\d+)?$/',
+            'number'    =>  '/^\d+$/',
+            'zip'       =>  '/^\d{6}$/',
+            'integer'   =>  '/^[-\+]?\d+$/',
+            'double'    =>  '/^[-\+]?\d+(\.\d+)?$/',
+            'english'   =>  '/^[A-Za-z]+$/',
+        );
+
+		 // 检查是否有内置的正则表达式
+        if(isset($validate[strtolower($rule)]))
+            $rule = $validate[strtolower($rule)];
+        return preg_match($rule,$value)===1;
 	}
 }
 ?>

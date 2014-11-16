@@ -1,10 +1,4 @@
-*{margin:0;padding:0;}
-body {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.4;
-    margin: auto;
-}
+
 /******头部广告*****/
 .topAd {
     border: 1px solid red;
@@ -30,104 +24,10 @@ body {
     right: 0px;
     display: none;
 }
-/*header*/
-header {
-    background: none repeat scroll 0% 0% #1C658B;
-    color: #A2B2A5;
-}
-.wrap_nav {
-    width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-    height:70px;
-}
-.wrap_nav .log, .wrap_nav ul, .wrap_nav .entry {
-    float: left;
-    height:70px;
-}
-.wrap_nav .log {
-    
-}
-.wrap_nav .log a, .wrap_nav .log a span {
-    color: #A2B2A5;
-    width: 190px;
-    text-align: center;
-    float: left;
-}
-.wrap_nav .log a:hover, .wrap_nav .log a span:hover {
-    color: #DBDBDB;
-}
-.wrap_nav .log a {
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    height: 70px;
-    line-height: 70px;
-    position: relative;
-    letter-spacing: -2px;
-}
-.wrap_nav .log a span {
-    position: absolute;
-    top: 35px;
-    left: 0px;
-    font-weight: normal;
-    text-decoration: underline;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-    font-weight: bold;
-}
-.wrap_nav ul {
-    width: 660px;
-    overflow: hidden;
-    float: left;
-}
-.wrap_nav ul, .wrap_nav li {
-    list-style: none;
-    float: left;
-}
-.wrap_nav li {
-    height: 70px;
-    line-height: 70px;
-    width: 100px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    background: #1C658B;
-    border-left: 2px solid #1C658B;
-}
-.wrap_nav li:hover {
-    border-left: 2px solid #ccc;
-    background: #eee;
-}
-
-.wrap_nav li a{
-    float: left;
-    width: 100px;
-    text-decoration: none;
-    color: #ccc;
-}
-.wrap_nav li a:hover {
-    color: #888;
-}
-
-.wrap_nav .entry {
-    font-weight: bold;
-    width: 110px;
-    line-height: 70px;
-}
-.wrap_nav .entry a {
-    color: #A2B2A5;
-    text-decoration: none;
-}
-.wrap_nav .entry a:hover{
-    color: #fff;
-}
 
 /*Content Start*/
 .Content {
-    background: #ccc;
+    background: #CBCBCA;
 }
 .imgbox {
     background: url(http://localhost/PeopleFish/APP/Home/Public/img/bg.jpg) no-repeat;
@@ -176,12 +76,40 @@ header {
     float: left;
     border: 1px solid red;
 }
-/*ccontent End*/
 
-/*footer Start*/
-footer {
-    border-top: 2px dashed #CCC;
-    height: 200px;
-    background: #2E4E3C;
+/*navbox*/
+.navbox {
+    border: 1px solid red;
+    background: #FFF;
 }
-/**footer End*/
+.navtit {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navtit-l {
+    float: left;
+}
+.navtit-r {
+    float: right;
+}
+.navtit-l, .navtit-r {
+    width: 460px;
+    border: 1px solid red;
+    padding: 10px 10px;
+    background: #FFF;
+}
+.navtit h2 {
+
+}
+.navtit p {
+
+}
+.navtit img {
+    width: 60px;
+    height: 60px;
+}
+
+/*ccontent End*/

@@ -3,65 +3,79 @@
 <head>
     <title>注册页面</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
-    <link href="http://localhost/PeopleFish/APP/Home/Public/css/Index/index.css"
-        rel="stylesheet"></link>
-    <link href="http://localhost/PeopleFish/APP/Home/Public/css/Index/register.css"
-        rel="stylesheet"></link>
+    <link href="
+        http://localhost/PeopleFish/APP/Home/Public/css/Index/index.css"
+        rel="stylesheet">
+    </link>
+    <link href="
+        http://localhost/PeopleFish/APP/Home/Public/css/Index/register.css"
+        rel="stylesheet">
+    </link>
+    <script type="text/javascript" src="http://localhost/PeopleFish/APP/Home/Public/js/jquery.js">
+    </script>
+    <script type="text/javascript" src="http://localhost/PeopleFish/APP/Home/Public/js/comfirmation.js">
+    </script>
 </head>
 
 <body>
+
+<!--header start-->
 <header>
-    <div class="wrap_nav">
-        <div class="log">
-            <a href="#">
-                网上问卷调查
-                <span>www.baidu.com</span>
-            </a>
-        </div>
+    <?php include 'APP/Home/View/Common/lrheader.html' ?>
 </header>
+<!--header end-->
 
 <!--中间部分-->
-<div class="register">
-    <div class="regbox">
-        <h1>注册问卷网</h1>
-        <form action="http://localhost/PeopleFish/index.php/Index/register.html"
-            method="post"  autocomplete="off">
-            <div class="inp error">错误信息提示</div>
-            <div class="inp">
-                <span class="nameIco">用户名：</span><input type="text" name="userName" autocomplete="off" 
-                    placeholder="邮箱/用户名/手机号"/>
+<div class="contents">
+    <div class="register">
+        <div class="regbox">
+            <h1>注册问卷网</h1>
+            <form action="http://localhost/PeopleFish/index.php/Index/register.html"
+                method="post"  autocomplete="off">
+                <div class="inp error"><?php echo $this->vars['error']; ?></div>
+                <div class="inp">
+                    <span class="nameIco">用户名：</span><input type="text" name="userName" value="<?php echo $this->vars['userName']; ?>" autocomplete="off" 
+                        placeholder="邮箱/用户名/手机号"/>
+                </div>
+                <div class="inp">
+                    <span class="passIco">密&nbsp;码：</span><input type="password" name="passWord" autocomplete="off" 
+                        placeholder="输入密码"/>
+                </div>
+                <div class="inp">
+                    <span class="passIco">确认密码：</span><input type="password" name="rePass" placeholder="确认密码"/>
+                </div>
+                <div class="submit">
+                    <input type="hidden" name="_act" value="reg" />
+                    <input type="submit" name="reg" value="注册"/>
+                </div>
+            </form>
+            <div class="third-part">
+                <h3>第三方账户登录</h3>
+                <a href="#" class="github" title="github"></a>
+                <a href="#" class="google" title="google"></a>
+                <a href="#" class="qq" title="qq"></a>
+                <a href="#" class="baidu" title="baidu"></a>            
+                <a href="#" class="linkin" title="linkin"></a>
+                <a href="#" class="sina" title="sine"></a>
             </div>
-            <div class="inp">
-                <span class="passIco">密&nbsp;码：</span><input type="password" name="passWord" autocomplete="off" 
-                    placeholder="输入密码"/>
-            </div>
-            <div class="inp">
-                <span class="passIco">确认密码：</span><input type="password" name="rePass" placeholder="确认密码"/>
-            </div>
-            <div class="submit">
-                <input type="submit" name="rePass" value="注册"/>
-            </div>
-        </form>
-        <div class="third-part">
-            <h3>第三方账户登录</h3>
-            <a href="#" class="github" title="github"></a>
-            <a href="#" class="google" title="google"></a>
-            <a href="#" class="qq" title="qq"></a>
-            <a href="#" class="baidu" title="baidu"></a>            
-            <a href="#" class="linkin" title="linkin"></a>
-            <a href="#" class="sina" title="sine"></a>
         </div>
-    </div>
-    <div class="logBox">
-        <h2>已有账户马上去登录</h2>
-        <div class="logcontent">
-            <a href="http://localhost/PeopleFish/APP/Home/View/Index/login.html">登录</a>
+        <div class="logBox">
+            <h2>已有账户马上去登录</h2>
+            <div class="logcontent">
+                <a href="http://localhost/PeopleFish/index.php/Index/login.html">登录</a>
+            </div>
         </div>
     </div>
 </div>
-<footer>
-版权所有
-</footer>
 
+<!--footer Start-->
+<footer>
+    <?php include 'APP/Home/View/Common/footer.html' ?>
+</footer>
+<!--footer End-->
+
+<script type="text/javascript">
+    infoProve('ssss');
+</script>
 </body>
 </html>

@@ -1,19 +1,19 @@
-<link href="http://localhost/PeopleFish/APP/Home/Public/css/Index/index.css"
+<link href="http://localhost/PeopleFish/APP/Home/Public/css/common.css"
         rel="stylesheet"></link>
 <script type="text/javascript" 
         src="http://localhost/PeopleFish/APP/Home/Public/js/jquery.js" >
 </script>
 <script> 
 $(document).ready(function() {
-    $('ul').click(function() {
-        $(this).css('background', 'red');
+    $('ul li').click(function() {
+        $(this).addClass('clicked');
     });
 });   
 </script>
-<header>
+<div class="header">
     <div class="wrap_nav">
         <div class="log">
-            <a href="#">
+            <a href="http://localhost/PeopleFish/index.php">
                 问卷调查
                 <span>www.baidu.com</span>
             </a>
@@ -36,9 +36,9 @@ $(document).ready(function() {
             </li>
         </ul>
         <div class="entry">
-            <a href="#">登录</a>
+            <a href="http://localhost/PeopleFish/index.php/Index/login.html">登录</a>
             <span>|</span>            
-            <a href="http://localhost/PeopleFish/APP/Home/View/Index/register.html">注册</a>
+            <a href="http://localhost/PeopleFish/index.php/Index/register.html">注册</a>
         </div>
     </div>
-</header>
+</div>

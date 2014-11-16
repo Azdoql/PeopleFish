@@ -14,7 +14,7 @@ class Dispatcher {
       * @return  解析后的URL（控制器url）
       */
     static public function dispatch () {
-        
+
         $PATH_INFO = isset($_SERVER['PATH_INFO']) ?
             $_SERVER['PATH_INFO'] : '';
 
@@ -49,5 +49,6 @@ class Dispatcher {
       $o->show($filename, $urlCase);
       return false;
     } 
+
 }
 ?>

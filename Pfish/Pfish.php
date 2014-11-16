@@ -26,6 +26,8 @@ defined('MODE_PATH') or define('MODE_PATH', 'Pfish'.DIR_SEP.'Mode'.DIR_SEP);
 // 配置文件的解析方法 
 defined('CONF_PARSE') or define('CONF_PARSE', '');
 
+defined('EXT') or define('EXT', '.class.php');
+
 require "Pfish/Library/Pfish/Pfish.class.php";
 Pfish\Pfish::start();
 ?>

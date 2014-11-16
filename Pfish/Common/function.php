@@ -4,8 +4,7 @@
  */
 function P($value) {
 	if (is_array($value)) {
-		echo '<pre>';
-		var_dump($value);
+		print_r($value);
 	} else {
 		echo $value . '<br />';
 	}
@@ -147,6 +146,8 @@ function D($name='',$layer='') {
 
     if(empty($name)) return new Pfish\Model;
     
+    $class = 'Home\\Model\\'.$name.'Model';
+    $model = new $class();
     return $model;
 }
 

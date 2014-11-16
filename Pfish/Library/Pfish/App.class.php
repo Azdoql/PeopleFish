@@ -28,6 +28,7 @@ class App {
     static public function init () {
         // URL 调度
         Dispatcher::dispatch();
+
         return ;
     }
 }

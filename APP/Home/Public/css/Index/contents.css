@@ -1,0 +1,63 @@
+*{
+	margin: 0px auto;
+	padding: 0px;
+}
+body {
+
+}
+fieldset {
+	border: 0px;
+}
+.contents {
+
+}
+.cont {
+	width: 1000px;
+	border: 1px solid #1C658B;
+}
+.cont h3 {
+	text-align: center;
+	padding: 20px 0px;
+}
+.cont .quession {
+	color: #79A732;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+.cont .ans {
+	padding: 5px 20px;
+}
+.cont .ans .sel {
+	height: 25px;
+	line-height: 25px;
+	margin: 10px 0px;
+}
+.cont .ans .sel:hover {
+	background: #EFC5FB;
+}
+.cont .ans .sel span {
+	float: left;
+}
+.cont .ans .sel p {
+	font-size: 14px;
+	margin-left: 20px;
+	width: 800px;
+}
+.cont .ans .seled {
+	background: #EFF6FB;
+}
+.cont .submit {
+	margin: 20px 0px;
+	text-align: center;
+}
+.cont .submit input[type=submit] {
+	padding: 8px 15px;
+	font-size: 16px;
+	font-weight: bold;
+	background: #1C658B;
+	border-radius: 3px;
+	border:1px solid  #EFF6FB
+}
+.cont .submit input[type=submit]:hover {
+	background: #1C559B;
+}

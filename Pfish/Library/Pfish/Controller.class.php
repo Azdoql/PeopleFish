@@ -20,10 +20,11 @@ class Controller {
     }
     
     public function show ($filename, $urlCase) {
+
         if (is_file(APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php')) {
             include APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php';
         } else {
-            echo 'Error:';
+            echo 'Error:'.APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php';;
         } 
 
         return ;
@@ -56,6 +57,18 @@ class Controller {
         } else {
             $this->vars[$name] = $value;
         }
+    }
+
+    /**
+     * 模板变量赋值
+     * @access protected
+     * @param mixed $name 要显示的模板变量
+     * @param mixed $value 变量的值
+     * @return 
+     */
+    public function asson($name, $value='') {
+        $name = $value;
+        echo $name;
     }
 
 }

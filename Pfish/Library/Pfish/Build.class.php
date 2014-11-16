@@ -43,7 +43,7 @@ class Build {
             }
         }
        
-        if (is_writeable(APP_PATH)) {echo 'sdsd';
+        if (is_writeable(APP_PATH)) {
             $dirs = array(
                 COMMON_PATH,
                 COMMON_PATH.'Common/',
@@ -53,6 +53,7 @@ class Build {
                 APP_PATH.$module.'/Controller/',
                 APP_PATH.$module.'/View/',
                 APP_PATH.$module.'/Conf/',
+                APP_PATH.$module.'/Model/',
                 );
 
             // 生成项目目录文件
@@ -77,7 +78,6 @@ class Build {
                 exit('应用目录['.APP_PATH.']不可写，目录无法自动生成！<BR>请手动生成项目目录~');
             }
             // 写入控制器文件
-            #code.......
             if (false) {
                 self::buildController($module, $controller);
             } else {
@@ -86,7 +86,7 @@ class Build {
 
             // 写入视图文件
             #code......
-            
+
         } else {
             die("Error: No TRUE");
         }

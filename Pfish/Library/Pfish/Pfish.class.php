@@ -1,6 +1,6 @@
 <?php
 /**
- * PfishºËÐÄÀà¿âÎÄ¼þ
+ * Pfish
  * 
  * 1.引入所需的类库文件
  * 2.自动检测建立项目文件
@@ -52,20 +52,24 @@ class Pfish {
      * @param $className 类名称
      * @return void
      */
-    static public function autoload($className) {
+    static public function autoload($class) {
+        if (false !== strpos($class, '\\')) {
+            $name = strstr($class, '\\', true);
+            
+            if (in_array($name, array('Pfish')) && is_dir(LIB_PATH.$name)) {
+                $path = LIB_PATH;
+            } else {
+                $path = APP_PATH;
+            }
 
-        if (explode('//', $className)) {
-            $className = str_replace( '\\', DIR_SEP, $className);
-        }
-        
-        $filename = PRO_PATH.'Pfish/Library/'.$className.'.class.php';
-        if (file_exists($filename) && !class_exists($className)) {
-            include_once $filename;
-        } else {
-            echo "Unable to load class: ".$className;
-        }
-      
-        return false;        
+            $filename = $path . str_replace('\\', '/', $class) . EXT;
+
+            if (file_exists($filename) && !class_exists($name)) {
+                include $filename;
+            } else {
+                echo "<div color='red'>Unable to load class: ".$name."</div>";
+            }
+        }     
     }
 
     /**
@@ -76,7 +80,7 @@ class Pfish {
      */
     static public function instance($class, $method='') {
         
-        if (class_exists($class)) {
+        if (class_exists($class)) {  // user autoload() function
             $o = new $class();
             return $o;
         } 

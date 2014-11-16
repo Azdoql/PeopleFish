@@ -15,7 +15,6 @@ body{
 .ch-container{
 	margin:0 auto;
 	padding: 0;
-	border: 1px solid red;
 }
 .login-header {
 	height: 120px;
@@ -31,10 +30,9 @@ h2 {
 /*login-box*/
 .login-box {
 	margin: 0 auto;
-	border: 1px solid red;
+	border: 1px solid #CCC;
 	border-radius: 5px;
-	width: 570px;
-	height: 343px;
+	width: 575px;
 	padding: 15px;
 }
 .alert {
@@ -45,4 +43,95 @@ h2 {
 	border: 1px solid transparent;
 	border-radius: 4px;
 	padding: 15px;
+}
+fieldset {
+	border-color: #FFF;
+}
+.input-group {
+	height: 45px;
+	line-height: 45px;
+	margin-top: 30px;
+}
+.input-group span, .input-group label {
+	width: 140px;
+}
+.input-group span {
+	font-weight: bold;
+	color: #000;
+	float: left;
+	text-align: right;
+	padding-right: 15px;
+	
+}
+.input-group input {
+	padding-left: 3px;
+	width: 260px;
+	height: 28px;
+	border: 1px solid #3A87AD;
+}
+.input-group .error {
+	color: red;
+	float: right;
+	padding-left: 8px;
+}
+.input-prepend {
+	width: 570px;
+}
+.input-prepend .remember {
+	display: block;
+	margin-left: 150px;
+	width: 260px;
+	margin-top: 5px;
+}
+.input-prepend .remember input {
+	
+} 
+.input-submit {
+	width: 570px;
+	margin: 10px 0px;
+	overflow: hidden;
+}
+.input-submit .submit {
+	margin-right: 153px;
+	float: right;
+}
+.input-submit .submit input[type=submit] {
+	background: #D9EDF7;
+	font-size: 16px;
+	font-weight: bold;
+	border: 1px solid #BCE8F1;
+	padding: 3px 5px;
+}
+.input-fotgot {
+	width: 570px;
+	margin: 15px 0px;
+	height: 25px;
+	line-height: 25px;
+}
+.input-fotgot a {
+	color: #3A87AD;
+	margin-left: 153px;
+	margin-left: 10px;
+}
+/*bg-style*/
+.bgstyle {
+	
+}
+.bg_box{
+	padding: 15px;
+	margin: 10px auto;
+	width: 575px;
+	border: 1px solid #CCC;
+}
+.bg_box .bgsub {
+	width: ;
+	
+	overflow: hidden;
+}
+.bg_box .bgsub .style {
+	float: left;
+	border: 1px solid red;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
 }
