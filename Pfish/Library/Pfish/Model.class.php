@@ -64,11 +64,30 @@ class Model {
             'double'    =>  '/^[-\+]?\d+(\.\d+)?$/',
             'english'   =>  '/^[A-Za-z]+$/',
         );
-
+		
 		 // 检查是否有内置的正则表达式
-        if(isset($validate[strtolower($rule)]))
+        if(isset($validate[strtolower($rule)])) {
             $rule = $validate[strtolower($rule)];
+        }
+        echo preg_match($rule,$value).'<br />';
         return preg_match($rule,$value)===1;
 	}
+
+	/*
+	 *
+	 */
+	public function clear($a)  {
+		print_r($this->_validate);
+		foreach ($this->_validate as $key => $value) {
+			
+		}
+		if (!$this->regex('email@qq', 'email')) {
+			$a = new Controller;
+			//$a->error('ss');
+		} 
+	}
+
+
+
 }
 ?>

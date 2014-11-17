@@ -7,6 +7,7 @@ if (isset($_POST) && isset($_POST['_act']) && ($_POST['_act'] == 'reg')) {
 	if (isset($_POST['userName']) && !empty($_POST['userName'])) {
 		if (strlen($_POST['userName']) < 6) {
 			$error = '长度不能小于６';
+
 		} else {
 			$InfoName = true;
 		}

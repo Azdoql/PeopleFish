@@ -37,7 +37,8 @@ class Template {
         //{for ( val : {array} )}
         '/\{\s*for\s*\(\s*([a-z0-9_]+)\s*:\s*([a-z0-9_]+)\s*\)\s*\}/is'
             => '<?php foreach ( \$this->vars[\'$2\'] as \$$1 ) { ?>',
-        '/\{\\s*\}\s*\}/is'    =>  '<?php } ?>'
+        '/\{\\s*\}\s*\}/is'    =>  '<?php } ?>',
+        
     );
 
 

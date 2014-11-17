@@ -163,14 +163,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "APP/Home/View/Index/index.html",
-			"settings":
-			{
-				"buffer_size": 5956,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -212,6 +204,7 @@
 	},
 	"file_history":
 	[
+		"/var/www/PeopleFish/APP/Home/View/Index/index.html",
 		"/var/www/PeopleFish/Pfish/Library/Pfish/Db/Mysql.class.php",
 		"/var/www/PeopleFish/APP/Home/Model/UserModel.class.php",
 		"/var/www/PeopleFish/APP/Home/View/Index/register.html",
@@ -232,7 +225,6 @@
 		"/var/www/PeopleFish/APP/Home/View/Index/login.html",
 		"/var/www/PeopleFish/Pfish/Common/function.php",
 		"/var/www/PeopleFish/APP/Home/Controller/Index/login.php",
-		"/var/www/PeopleFish/APP/Home/View/Index/index.html",
 		"/var/www/PeopleFish/Admin/Home/View/Index/index.html",
 		"/var/www/PeopleFish/Admin/Home/Controller/Common/right.php",
 		"/var/www/PeopleFish/Admin/Home/Controller/Common/left.php",
@@ -388,38 +380,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "APP/Home/View/Index/index.html",
-					"settings":
-					{
-						"buffer_size": 5956,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1883,
-								1883
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1560.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
