@@ -28,10 +28,21 @@ class View {
         // 页面缓存
         ob_start();
         ob_implicit_flush(0);
-        $templateFile = $templateFile == '' ? 
-            APP_PATH.'Home/View/'.CONTROLLER_NAME.'.html' :
-            APP_PATH.'Home/View/'.dirname(CONTROLLER_NAME).'/'.$templateFile;
+        
+        /*
+        echo CONTROLLER_NAME.'<br />';
+        if (!strpos($templateFile, '\/')) {
+            $templateFile = APP_PATH.'Home/View/'.dirname(CONTROLLER_NAME).'/'.$templateFile;;
+        } else {
+            $templateFile = APP_PATH.'Home/View/'.CONTROLLER_NAME.'/'.$templateFile;;
+        }
+        */
+        //echo $templateFile;
+
+        $templateFile = APP_PATH.'Home/View/'.CONTROLLER_NAME.'.html';;
+        
         $cacheFile = APP_PATH.'Home/Temp/'.CONTROLLER_NAME.'.html';
+        
         if (is_file($templateFile)) {
             Template::compiler($templateFile, $cacheFile);
         } else {

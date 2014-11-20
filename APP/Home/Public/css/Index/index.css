@@ -1,6 +1,6 @@
 
 /******头部广告*****/
-.topAd {
+.topAd {z-index: 0;
     border: 1px solid red;
     margin: auto;
     text-align: center;
@@ -113,3 +113,4 @@
 }
 
 /*ccontent End*/
+

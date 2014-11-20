@@ -7,23 +7,24 @@ body {
 }
 /*header*/
 header {
-    
-    
-}
-.header {
     color: #A2B2A5;
     background: none repeat scroll 0% 0% #1C658B;
 }
-.wrap_nav {
-    
+.header {
     width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+.wrap_nav {
+    width: 1000px;   
     margin: 0 auto;
     overflow: hidden;
-    height:70px;
 }
-.wrap_nav .log, .wrap_nav ul, .wrap_nav .entry {
+.wrap_nav .log, .wrap_nav ul {
     float: left;
-    height:70px;
+}
+.wrap_nav .entry {
+    float: right;
 }
 .wrap_nav .log {
     
@@ -60,7 +61,6 @@ header {
     font-weight: bold;
 }
 .wrap_nav ul {
-    width: 660px;
     overflow: hidden;
     float: left;
 }
@@ -98,7 +98,9 @@ header {
 
 .wrap_nav .entry {
     font-weight: bold;
-    width: 110px;
+}
+.wrap_nav .entry .entry_c {
+    height: 70px;
     line-height: 70px;
 }
 .wrap_nav .entry a {
@@ -147,3 +149,89 @@ footer {
     font-weight: normal;
 }
 /*footer End*/
+/*user Start*/
+.user {
+    z-index: 0;
+}
+.user_cont {
+    overflow: hidden;
+    height: 70px;
+    line-height: 70px;
+}
+.user_cont .user_tit {
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    margin-right: 10px;
+}
+.user_cont .user_tit a {
+    background:url(http://localhost/PeopleFish/APP/Home/Public/img/index_logo_other.png) no-repeat;
+    padding: 0px 8px;
+}
+.user_cont .user_box {
+  float: left;
+}
+.user_cont .user_box .username {
+    float: right;
+    overflow: hidden;
+}
+.user_cont .user_box .username .username_tit, .user_cont .user_box .username .arrowup {
+    float: left;
+}
+.user_cont .user_box .username .arrowup {
+    margin-bottom: 0px;
+}
+.user_cont .user_box .username .arrowup_n {
+    margin: 35px 10px;
+    border-width: 5px 5px 0px;
+    border-style: solid dashed dashed;
+    height: 0px;
+    width: 0px;
+    z-index: 1;
+    padding: 0px !important;
+    border-color: #A2B2A5 transparent transparent;
+    color: inherit;
+    font: 0px/9999px serif;
+}
+
+.user_cont .user_box .username .arrowup_y {
+    border-style: dashed dashed solid;
+    border-width: 0px 5px 5px;
+    border-color: transparent transparent #A2B2A5;
+}
+.user_cont .user_box .user_nav {
+    display: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    z-index: 2;
+}
+.user_cont .user_box .user_nav .nav {
+    border-bottom: 1px solid #A2B2A5;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.user_cont .user_box .user_nav .nav a {
+    float: left;
+    width: 90px;
+}
+.user_cont .user_box .user_nav .nav:hover {
+    background: #4C9ED9;
+    padding: 0px;
+}
+.user_cont .user_box .user_nav .first:hover {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.user_cont .user_box .user_nav .last:hover {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*user End*/

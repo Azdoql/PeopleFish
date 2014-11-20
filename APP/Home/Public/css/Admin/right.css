@@ -1,0 +1,307 @@
+*{
+	margin: auto;
+	padding: 0px;
+}
+body {
+	background: #D1D1D1;
+}
+.right {
+	margin-right: 55px;
+	background: #ccc;
+	margin-left: 10px;
+}
+.rconts {
+	margin-top: 8px;
+	border: 1px solid #E6E6E6;
+}
+.rcont-box {
+	
+}
+.rcont-box .rtit {
+	background: #376DA4;
+	height: 35px;
+	line-height: 35px;
+	overflow: hidden;
+	color: #FFFEFD;
+	font-weight: bold;
+}
+.rcont-box .rtit .titr {
+	float: left;
+	padding-left: 10px;
+}
+.rcont-box .rtit .titl {
+	float: right;
+	padding-right: 10px;
+	border-left: 2px solid #4576A8;
+	padding-left: 5px;
+
+}
+/*search Start*/
+.search {
+	
+}
+.search input[type=text] {
+	width: 120px;
+	border: 1px solid #4F85BB;
+	padding: 1px 5px;
+	font-size: 12px;
+}
+.search input[type=submit] {
+	border: 1px solid #4F85BB;
+	background: #528BC4;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 5px;
+}
+/*search End*/
+.rcont-box .rcont {
+	background: #FFF;
+	padding: 15px;
+}
+/*table Start*/
+.table {
+	
+}
+table {
+	border-spacing: 0px;
+	font-size: 12px;
+	width: 100%;
+}
+table th, table td {
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+	border-bottom: 1px solid #CFCFCF;
+	border-right: 1px solid #CFCFCF;
+}
+table th {
+	background: #EEEEEE;
+}
+table td {
+	white-space: none;
+}
+table .tf {
+
+}
+table .tl {
+	border-right:0px solid red;
+	border-right-color: red;
+}
+.table .show {
+	margin: 10px 0px;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: bold;
+	
+	padding: 2px;
+	border-radius: 3px;
+}
+.table .show .showl {
+	color: #4F4C4A;
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	background: #ECECEC;
+	padding: 0px 7px;
+	border: 1px solid #C7C7C7;
+}
+.table .show .showr {
+	height: 25px;
+	line-height: 25px;
+	float: right;
+}
+.table .show .showr .in {
+	background: #B9B9B9;
+}
+.table .show .showr .out a {
+	color: #B4B5B7;
+}
+.table .show .showr a {
+	border-radius: 3px;
+	display: block;
+	text-decoration: none;
+	padding: 0px 7px;
+	color: #4F4C4A;
+	border: 1px solid #C7C7C7;
+}
+.table .show .showr span {
+	float: left;
+	border-radius: 3px;
+	margin: 0px 3px;
+	background: #EEEEEE;
+}
+/*table End*/
+/*Message Start*/
+.error {
+	background: #FBE3E4;
+	border: 1px solid #FBC3C5;
+	margin: 10px 0px;
+	font-size: 12px;
+	overflow: hidden;
+	color: red;
+}
+.error-img, .error-text {
+	height: 50px;
+	float: left;
+}
+.error-text {
+	
+}
+.error .error-text h5, .error .error-text p {
+	font-size: 12px;
+}
+.error .error-text h5 {
+	color: #9C0034;
+	margin-top: 10wwpx;
+}
+.error .error-text p {
+	color: #92143C;
+}
+.error .error-button {
+	float: right;
+	border: 1px solid red;
+	width: 40px;
+}	
+.error .error-img {
+	border: 1px solid red;
+	width: 55px;
+}
+.warn {
+	background: #FFF6BF;
+	border: 1px solid #FFD52B;
+	margin: 10px 0px;
+	font-size: 12px;
+	overflow: hidden;
+	color: red;
+}
+.warn-img, .warn-text {
+	height: 40px;
+	border: 1px solid red;
+	float: left;
+}
+.warn .warn-text h5, .warn .warn-text p {
+	height: 20px;
+	line-height: 20px;
+}
+.warn .warn-text h5 {
+	color: #685200;
+}
+.warn .warn-text p {
+	color: #B7772F;
+}
+.warn .warn-button {
+	float: right;
+	border: 1px solid red;
+	width: 40px;
+	height: 40px;
+}	
+.warn .warn-img {
+	border: 1px solid red;
+	width: 55px;
+}
+.notice {
+	background: #8FBDE0;
+	margin: 10px 0px;
+	border: 1px solid #6BACDE;
+	font-size: 12px;
+	overflow: hidden;
+	color: red;
+}
+.notice-img, .notice-text {
+	height: 40px;
+	border: 1px solid red;
+	float: left;
+}
+.notice .notice-text h5, .notice .notice-text p {
+	height: 20px;
+	line-height: 20px;
+}
+.notice .notice-text h5 {
+	color: #183875;
+}
+.notice .notice-text p {
+	color: #3464A9;
+}
+.notice .notice-button {
+	float: right;
+	border: 1px solid red;
+	width: 40px;
+	height: 40px;
+}	
+.notice .notice-img {
+	border: 1px solid red;
+	width: 55px;
+}
+.success {
+	background: #E6EFC2;
+	margin: 10px 0px;
+	border: 1px solid #C9DA86;
+	font-size: 12px;
+	overflow: hidden;
+	color: red;
+}
+.success-img, .success-text {
+	height: 40px;
+	border: 1px solid red;
+	float: left;
+}
+.success .success-text h5, .success .success-text p {
+	height: 20px;
+	line-height: 20px;
+}
+.success .success-text h5 {
+	color: #59610A;
+}
+.success .success-text p {
+	color: #958E1D;
+}
+.success .success-button {
+	float: right;
+	border: 1px solid red;
+	width: 40px;
+	height: 40px;
+}	
+.success .success-img {
+	border: 1px solid red;
+	width: 55px;
+}
+/*message End*/
+/*Forms Start*/
+.form {
+	border: 1px solid red;
+}
+fieldset{
+
+}
+fieldset .input-cont {
+	font-size: 12px;
+	border: 1px solid red;
+	height: 35px;
+	line-height: 35px;
+}
+fieldset .input-cont span {
+	font-weight: bold;
+	float: left;
+	width: 220px;
+	padding-left: 12px;
+}
+fieldset .input-cont input[name=small] {
+	border: 1px solid red;
+	width: 210px;
+}
+fieldset .input-cont input[type=submit] {
+	border: 1px solid red;
+}
+fieldset .clearfix {
+	border: 1px solid #ccc;
+	margin: 10px 0px;
+}
+fieldset input[name=medium] {
+	width: 420px;
+}
+fieldset input[name=large] {
+	width: 640px;
+}
+/*Forms End*/

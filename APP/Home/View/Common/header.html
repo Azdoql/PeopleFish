@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <link href="http://localhost/PeopleFish/APP/Home/Public/css/common.css"
         rel="stylesheet"></link>
 <script type="text/javascript" 
@@ -10,7 +13,8 @@ $(document).ready(function() {
     });
 });   
 </script>
-<div class="header">
+<header>
+    <div class="header">
     <div class="wrap_nav">
         <div class="log">
             <a href="http://localhost/PeopleFish/index.php">
@@ -36,9 +40,60 @@ $(document).ready(function() {
             </li>
         </ul>
         <div class="entry">
-            <a href="http://localhost/PeopleFish/index.php/Index/login.html">登录</a>
-            <span>|</span>            
-            <a href="http://localhost/PeopleFish/index.php/Index/register.html">注册</a>
+            <?php 
+                if (isset($_SESSION['user_name']) &&
+                 !empty($_SESSION['user_name'])) {
+            ?>
+                <div class="user">
+                    <div class="user_cont">
+                        <div class="user_tit"><a title="" href="javascript:;">&nbsp;</a></div>
+                        <div class="user_box">
+                            <div class="username">
+                                <div class="username_tit">
+                                    <a id="user" title="<?php echo $_SESSION['user_name']?>" href="javascript:;">
+                                    <?php echo $_SESSION['user_name']?>
+                                    </a>
+                                </div>
+                                <div class="arrowup">
+                                    <div class="arrowup_n"></div>
+                                </div>
+                            </div>
+                            <div class="user_nav">
+                                    <div class="nav first"><a href="#">會員中心</a></div>
+                                    <div class="nav"><a href="#">會員中心</a></div>
+                                    <div class="nav"><a href="#">會員中心</a></div>
+                                    <div class="nav last"><a href="http://localhost/PeopleFish/index.php/User/logout.html">退出</a></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                $(document).bind("click",function(e){ 
+                    var target  = $(e.target); 
+                    if(target.closest("#user").length == 0){ 
+                        $(".user_nav").hide(); 
+                        $('.arrowup_n').removeClass('arrowup_y');
+                    } 
+                    else 
+                    { 
+                        $(".user_nav").show();
+                        $('.arrowup_n').addClass('arrowup_y');
+                    } 
+                }); 
+                </script>
+            <?php
+                } else {
+            ?>
+                <div class="entry_c">
+                    <a href="http://localhost/PeopleFish/index.php/Index/login.html">登录</a>
+                    <span>|</span>            
+                    <a href="http://localhost/PeopleFish/index.php/Index/register.html">注册</a>
+                </div>
+            <?php
+                }
+            ?>
         </div>
     </div>
-</div>
+    </div>
+</header>

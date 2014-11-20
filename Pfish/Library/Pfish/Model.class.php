@@ -4,7 +4,8 @@ namespace Pfish;
 class Model {
 	
 	private $db_config = array();
-	private $Db = null;
+	private $db = null;
+	private $name = null;
 	protected $_validate = array(); 
 
 	 /**
@@ -14,7 +15,8 @@ class Model {
      * @param string $tablePrefix 表前缀
      * @param mixed $connection 数据库连接信息
      */
-	function __construct($connection = '') {
+	function __construct($name='', $tablePrefix='',$connection='') {
+	
 		$config = C();
 		$this->db_config = $config;
 		$this->db();
@@ -28,7 +30,7 @@ class Model {
 
 		switch ($this->db_config['DB_TYPE']) {
 			case "mysql":
-				$this->Db = new Db\Mysql($this->db_config);
+					$this->db = new Db\Mysql($this->db_config);
 				break;
 			
 			default:
@@ -37,13 +39,18 @@ class Model {
 		}
 	}
 
-	public function select() {
-		$this->Db->select();
+	public function query($query) {
+		$this->db->query($query);
+	}
+
+	public function select($table, $type = MYSQLI_ASSOC) {
+		return $this->db->select($table, $type);
 	}
 
 	public function insert($table, $array) {
-		$this->Db->insert($table, $array);
+		$this->db->insert($table, $array);
 	}
+
 
 	/**
      * 使用正则验证数据
@@ -69,22 +76,37 @@ class Model {
         if(isset($validate[strtolower($rule)])) {
             $rule = $validate[strtolower($rule)];
         }
-        echo preg_match($rule,$value).'<br />';
+      
         return preg_match($rule,$value)===1;
 	}
 
 	/*
 	 *
 	 */
-	public function clear($a)  {
-		print_r($this->_validate);
-		foreach ($this->_validate as $key => $value) {
-			
+	public function creat($_data)  {
+		
+			$mothed =  MOTHED;
+			$this->$mothed($_data);
+		return false;
+	}
+
+	private static function isWhiteSpace( $str ) {
+		return ( $str == '' || preg_match( '/^\s+$/' , $str ) );
+	}
+
+	protected function clear($_data, $_model, $_errorno) {
+		
+		$view = new Controller;
+
+		foreach ($_data as $key => $value) {
+			if (isset($_model[$key])) {
+				foreach ($_model[$key] as $k => $v) {					
+					if (!$this->regex($value, $v)) {
+						$view->error($_errorno[$key][$k]);
+					}
+				}
+			}
 		}
-		if (!$this->regex('email@qq', 'email')) {
-			$a = new Controller;
-			//$a->error('ss');
-		} 
 	}
 
 

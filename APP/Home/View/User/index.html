@@ -1,10 +1,185 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <title>问卷网</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+    <link href="http://localhost/PeopleFish/APP/Home/Public/css/Index/index.css"
+        rel="stylesheet"></link>
+    <script type="text/javascript" 
+        src="http://localhost/PeopleFish/APP/Home/Public/js/jquery.js" >
+    </script>
+<script type="text/javascript">
+window.onload = function() {
+    $('#topAd').show();
+    $('#topAd').animate({height:500}, 500, function() {
+        });
+     setInterval(function(){
+        $('#topAd').animate({height:80}, 500, function() {
+            $('#closeBtn').show();
+            $('#topAdMax').hide();
+        });
+     }, 3000);
+}
+$(document).ready(function(){
+    $('#closeBtn').click(function(){
+        $(this).hide();
+        $('#topAd').animate({height:0}, 500, function() {
+            $(this).hide();
+        });
+    });
+});
+
+</script> 
 </head>
+
 <body>
-	
+<!-- Insert your content here -->
+<!--头部广告-->
+
+<div class="topAd" id="topAd">
+    <img src="http://localhost/PeopleFish/APP/Home/Public/img/bg-blue-s.jpg"
+        width="1000" height="400" id="topAdMax" class="topAdImg" />
+    <img src="http://localhost/PeopleFish/APP/Home/Public/img/bg-blue-s.jpg"
+        width="1000" height="200" id="topAdMin" class="topAdImg" />
+    <a href="javascript:void(0);" id="closeBtn">X</a>
+</div>
+
+
+<!--header start-->
+<header>
+   {include file }
+</header>
+<!--header end-->
+
+<!--contnt Start-->
+<div class="Content">
+    <div class="imgbox">
+        <div class="imgbox_n">
+            <form>
+                <fieldset>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="survey">
+        <div class="su_box">
+            <div class="su_dc su_left">
+                <div class="su_head">
+                    <a target="_black"href="http://localhost/PeopleFish/index.php/Index/contents.html">关于大学生求职租正装的调查</a>
+                </div>
+                <div class="su_content">
+                    <div class="su_img">
+                        <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                    </div>
+                    <div class="su_text">
+                        ddddd
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="su_box">
+            <div class="su_dc su_right">
+                <div class="su_head">
+                    <a href="#">手机调查</a>
+                </div>
+                <div class="su_content">
+                    <div class="su_img">
+                        <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                    </div>
+                    <div class="su_text">
+                        ddddd
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="su_box">
+            <div class="su_dc su_left">
+                <div class="su_head">
+                    <a href="#">满意度问卷调查</a>
+                </div>
+                <div class="su_content">
+                    <div class="su_img">
+                        <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                    </div>
+                    <div class="su_text">
+                        ddddd
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="su_box">
+            <div class="su_dc su_right">
+                <div class="su_head">
+                    <a href="#">手机调查</a>
+                </div>
+                <div class="su_content">
+                    <div class="su_img">
+                        <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                    </div>
+                    <div class="su_text">
+                        ddddd
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbox">
+        <div class="navtit">
+            <div class="navtit-l">
+                <h3>问卷调查</h3>
+                <p>
+                    问卷调查问卷调查问卷调查问卷调查问卷调查问卷调查问卷调查
+                </p>
+                <div class="tit-box">
+                    <div class="su_content">
+                        <div class="su_img">
+                            <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                        </div>
+                        <div class="su_text">
+                            <h4>sdsdsds</h4>
+                            <p>ssdsddsds</p>
+                        </div>
+                    </div>
+                    <div class="su_content">
+                        <div class="su_img">
+                            <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                        </div>
+                        <div class="su_text">
+                            <h4>sdsdsds</h4>
+                            <p>ssdsddsds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navtit-r">
+                <h3>问卷调查</h3>
+                <p>
+                    问卷调查问卷调查问卷调查问卷调查问卷调查问卷调查问卷调查
+                </p>
+                <div class="tit-box">
+                    <div class="su_content">
+                        <div class="su_img">
+                            <img src="http://localhost/PeopleFish/APP/Home/Public/img/s-company.gif"/>
+                        </div>
+                        <div class="su_text">
+                            <h4>sdsdsds</h4>
+                            <p>ssdsddsds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content End-->
+
+<!--footer Start-->
+<footer>
+    <?php include 'APP/Home/View/Common/footer.html' ?>
+</footer>
+<!--footer End-->
 </body>
 </html>

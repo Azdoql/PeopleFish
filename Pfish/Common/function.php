@@ -145,7 +145,7 @@ function load_config($file, $parse = CONF_PARSE) {
 function D($name='',$layer='') {
 
     if(empty($name)) return new Pfish\Model;
-    
+   
     $class = 'Home\\Model\\'.$name.'Model';
     $model = new $class();
     return $model;

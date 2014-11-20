@@ -40,7 +40,23 @@ class Mysql extends Db {
 		return mysqli_query( $this->_link, $_query );
 	}
 
-	public function select() {
+	public function select($table, $_type = MYSQLI_ASSOC) {
+		$_query = 'SELECT * FROM '. 'pfish_' . $table .' WHERE 1 = 1 ';
+		
+		$_ret = $this->query ( $_query );
+
+		
+		if ( $_ret != FALSE ) {
+			$_result = array();
+			while ( ( $_row = mysqli_fetch_array( $_ret, $_type ) ) != FALSE ) {
+				$_result[] = $_row;
+			}
+
+			return $_result;
+		} else {
+			echo 'Error!';
+		}
+		return FALSE;
 
 	}
 

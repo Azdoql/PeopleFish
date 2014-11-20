@@ -31,13 +31,17 @@ class Template {
         '/\$\{([a-z0-9_]+).([a-z0-9_]+).([a-z0-9_]+)\}/is'    => 
             '<?php echo $this->vars[\'$1\'][\'$2\'][\'$3\']; ?>',
         /*include | require file*/
-        '/\{(include|require)\s+([a-z0-9_\/\-]+)\}/is'    
+        '/\{\s*(include|require)\s*([a-z0-9_\/\-.]+)\s*\}/is'    
             =>  '<?php \$this->getIncludeFile(\'$2\') ?>',
         
         //{for ( val : {array} )}
         '/\{\s*for\s*\(\s*([a-z0-9_]+)\s*:\s*([a-z0-9_]+)\s*\)\s*\}/is'
             => '<?php foreach ( \$this->vars[\'$2\'] as \$$1 ) { ?>',
         '/\{\\s*\}\s*\}/is'    =>  '<?php } ?>',
+
+        // include file 
+        //include|require file
+        //'/(include|require)\s+([a-z0-9\.\/-]+)/i'  => '$1 \$this->getIncludeFile(\'$2\')'
         
     );
 

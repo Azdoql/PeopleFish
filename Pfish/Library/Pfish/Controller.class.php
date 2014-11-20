@@ -21,6 +21,7 @@ class Controller {
     
     public function show ($filename, $urlCase) {
 
+        define('MOTHED', $urlCase);
         if (is_file(APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php')) {
             include APP_PATH.'Home/Controller/'.$filename.$urlCase.'.php';
         } else {
@@ -37,11 +38,13 @@ class Controller {
      * @return mixed
      */
     public function display ($templateFile='') {
+        
         include $this->view->display($templateFile);
     }
 
     private function getIncludeFile( $_inc_file ) {
-       
+        
+       include $this->view->display($_inc_file);
     }
 
     /**
@@ -78,13 +81,17 @@ class Controller {
     }
 
     private function dispatchJump($message='',$state = 1, $jumpUrl='',$ajax=false) {
-        if ($status=1) {
+        if ($state) {
             $success = $message;
         } else {
             $error = $message;
         }
+        if ($jumpUrl != '') {
+            $jumpUrl = $jumpUrl;
+        } else {
+            $jumpUrl = 'javascript:history.back(-1);';
+        }
         
-        $jumpUrl = 'javascript:history.back(-1);';
         $waitSecond = 3;
         include './Pfish/Tpl/dispatch_jump.html';
         exit;

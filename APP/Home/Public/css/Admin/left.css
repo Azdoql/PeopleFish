@@ -1,0 +1,72 @@
+*{
+	margin: auto;
+	padding: 0px;
+}
+body {
+	background: #D1D1D1;
+}
+.left {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 8px; 
+}
+.left .lbox {
+	background: #fff;
+	padding: 5px;
+}
+.left .lbox  .lcont {
+	margin-left: 55px;
+
+}
+.left .lbox  .lcont .lnav {
+	border-radius: 6px 6px 0px 0px;
+	border: 1px solid #799EC3;
+}
+.left .lbox  .lcont .lnav .ltit {
+	border-radius: 6px 6px 0px 0px;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 12px;
+	color: #fff;
+	background: #00376E;
+}
+.left .lbox  .lcont .lsub {
+
+}
+.left .lbox  .lcont .lsub ul, .left .lbox  .lcont .lsub ul li {
+	list-style-type: none;
+} 
+.left .lbox  .lcont .lsub ul li  {
+	border-top: 1px solid #4276AA;
+	background: #376EA6;
+	height: 25px;
+	line-height: 25px;
+}
+.left .lbox  .lcont .lsub ul li a {
+	color: #FBF8F9;
+	display: block;
+	text-decoration: none;
+}
+.left .lbox  .lcont .lsub ul li span {
+	color: #D3DFEC;
+	background: #285889;
+	float: left;
+	margin-right: 5px;
+	width: 20px;
+	text-align: center;
+	
+}
+.left .lbox .lconted {
+	border-radius: 6px;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 12px;
+	color: #000;
+	background: #ECECec;
+	margin-top: 5px;
+	background: #DDDDDD;
+	border-bottom: 1px solid #B0B0B0;
+}
+.left .lbox  .lcont .lnaved {
+	display: none;
+}

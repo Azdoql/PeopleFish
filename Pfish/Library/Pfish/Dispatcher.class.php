@@ -45,6 +45,7 @@ class Dispatcher {
         }
 
       define('CONTROLLER_NAME', $filename.$urlCase);
+      
       $o = Pfish::instance('Pfish\Controller');
       $o->show($filename, $urlCase);
       return false;

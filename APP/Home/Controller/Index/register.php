@@ -6,13 +6,13 @@ $Info = false;
 if (isset($_POST) && isset($_POST['_act']) && ($_POST['_act'] == 'reg')) {
 	if (isset($_POST['userName']) && !empty($_POST['userName'])) {
 		if (strlen($_POST['userName']) < 6) {
-			$error = '长度不能小于６';
+			$error = '用户名长度不能小于６！';
 
 		} else {
 			$InfoName = true;
 		}
 	} else {
-		$error= '用户名不能为空';
+		$error= '用户名不能为空！';
 	}
 }
 
@@ -22,13 +22,13 @@ if ($InfoName) {
 			if ($_POST['rePass'] == $_POST['passWord']) {
 				$Info = true;
 			} else {
-				$error = '两次密码不相同';
+				$error = '两次密码不相同！';
 			}
 		} else {
-			$error = '密码位数不足';
+			$error = '密码位数不足！';
 		}
 	} else {
-		$error= '密码不能为空';
+		$error= '密码不能为空！';
 	}
 }
 
@@ -38,11 +38,12 @@ if ($Info === true) {
 	$arr  = array(
 		'userName' => $_POST['userName'],
 		'passWord' => md5($_POST['passWord']),
-
+		'time'	   => time(),	
 	);
 
 	if (!is_numeric($user->insert('User', $arr))) {
 		$error = 'OK';
+		$this->success('注册成功，马上去登录！', 'login.html');
 	} else {
 		$error = 'error';
 	}
@@ -56,6 +57,5 @@ if (isset($_POST['userName'])) {
 
 $this->assign('error', $error);
 	
-
 $this->display();
 ?>
